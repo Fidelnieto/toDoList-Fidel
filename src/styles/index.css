@@ -1,11 +1,16 @@
 * {
   background-color: hsl(19, 41%, 86%);
-}
-
-.title {
   font-family: cursive;
 }
 
 .li {
   list-style-type: none;
+}
+
+.disp > .close {
+  display: none;
+}
+
+.disp:hover > .close {
+  display: flex;
 }

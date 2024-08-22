@@ -30,9 +30,17 @@ function List() {
       />
       <ul>
         {doList.map((item, index) => (
-          <li className="li d-flex justify-content-between" key={index}>
-            {item}
-            <button onClick={handleOnClick}>X</button>
+          <li
+            className="li m d-flex justify-content-between ps-1 fs-4"
+            key={index}
+          >
+            <button
+              className="btn disp d-flex justify-content-between col-12"
+              onClick={handleOnClick}
+            >
+              <span>{item}</span>
+              <span className="close">x</span>
+            </button>
           </li>
         ))}
       </ul>
