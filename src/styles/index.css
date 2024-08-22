@@ -1,10 +1,17 @@
 * {
-  background-color: hsl(19, 41%, 86%);
+  background-color: hsl(17, 36%, 76%);
   font-family: cursive;
+}
+
+.input {
+  background-color: white;
+  border: none;
+  padding: 10px 5px 10px 25px;
 }
 
 .li {
   list-style-type: none;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.063);
 }
 
 .disp > .close {
@@ -13,4 +20,8 @@
 
 .disp:hover > .close {
   display: flex;
+}
+
+.completo {
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.375);
 }
