@@ -1,7 +1,8 @@
 * {
-  background-color: hsl(17, 36%, 76%);
-  font-family: cursive;
+  background-color: #dadada;
+
 }
+
 
 .input {
   background-color: white;
@@ -23,5 +24,5 @@
 }
 
 .completo {
-  box-shadow: 3px 3px rgba(0, 0, 0, 0.375);
+  box-shadow: 3px 3px hwb(0 38% 62% / 0.824);
 }

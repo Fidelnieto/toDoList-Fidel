@@ -6,17 +6,20 @@ function List() {
 
   function handleOnKeyDown(event) {
     if (event.key == "Enter") {
-      if (inputValue === "") {
+      const trimmedValue = inputValue.trim(); 
+      if (trimmedValue === "") {
+        return;
       }
+
       setDoList([...doList, inputValue]);
       setInputValue("");
     }
   }
   window.addEventListener("keydown", handleOnKeyDown);
 
-  function handleOnClick() {
+  function handleOnClick(index) {
     const newArray = doList.slice();
-    newArray.pop();
+    newArray.splice(index,1)
     setDoList(newArray);
   }
 
