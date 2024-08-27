@@ -6,20 +6,19 @@ function List() {
 
   function handleOnKeyDown(event) {
     if (event.key == "Enter") {
-      const trimmedValue = inputValue.trim(); 
+      const trimmedValue = inputValue.trim();
       if (trimmedValue === "") {
         return;
       }
 
-      setDoList([...doList, inputValue]);
+      setDoList((prev) => [...prev, inputValue]); // Changed
       setInputValue("");
     }
   }
-  window.addEventListener("keydown", handleOnKeyDown);
 
   function handleOnClick(index) {
     const newArray = doList.slice();
-    newArray.splice(index,1)
+    newArray.splice(index, 1);
     setDoList(newArray);
   }
 
@@ -31,6 +30,7 @@ function List() {
         value={inputValue}
         placeholder="What needs to be done?"
         className="input"
+        onKeyDown={handleOnKeyDown} // Changed
       />
       <ul className="bg-light">
         {doList.map((item, index) => (
